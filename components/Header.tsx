@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Logo = () => (
     <img 
-        src="https://i.ibb.co/yYyW9f7/Whats-App-Image-2025-11-10-at-3-11-33-AM-2-removebg-preview.png"
+        src="https://i.ibb.co/SDcrgDpp/image.png"
         alt="White Emerald Dental Care Logo" 
         className="h-12 w-auto" 
     />
