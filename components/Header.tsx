@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 
 const Logo = () => (
     <img 
-        src="/logo.png"
+        src="https://i.ibb.co/SDcrgDpp/image.png"
         alt="White Emerald Dental Care Logo" 
-        className="h-12 w-auto"
+        className="h-12 w-auto" 
     />
 );
 
