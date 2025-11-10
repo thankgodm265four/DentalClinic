@@ -70,16 +70,16 @@ const Calendar: React.FC<CalendarProps> = ({ selectedDate, onDateSelect, onClose
       const isToday = today.toDateString() === currentDate.toDateString();
       const isPast = currentDate < today;
 
-      let className = "text-center p-2 rounded-full cursor-pointer transition-colors duration-200";
+      let className = "text-center p-2 rounded-full cursor-pointer transition-colors duration-200 text-text-headings";
       
       if (isPast) {
         className += " text-gray-300 cursor-not-allowed line-through";
       } else if (isSelected) {
-        className += " bg-brand-blue text-white font-bold shadow-lg";
+        className += " bg-brand-accent text-white font-bold shadow-lg";
       } else if (isToday) {
-        className += " bg-brand-red-light text-brand-red font-bold";
+        className += " bg-brand-accent-light text-brand-accent font-bold";
       } else {
-        className += " hover:bg-brand-blue-light";
+        className += " hover:bg-bg-secondary";
       }
       
       days.push(
@@ -92,17 +92,17 @@ const Calendar: React.FC<CalendarProps> = ({ selectedDate, onDateSelect, onClose
   };
 
   return (
-    <div ref={calendarRef} className="absolute top-full mt-2 w-full max-w-sm bg-white border rounded-lg shadow-lg p-4 z-10">
+    <div ref={calendarRef} className="absolute top-full mt-2 w-full max-w-sm bg-bg-primary border border-border-color rounded-lg shadow-lg p-4 z-10">
       <div className="flex justify-between items-center mb-4">
-        <button onClick={handlePrevMonth} className="p-2 rounded-full hover:bg-gray-100">&lt;</button>
-        <div className="font-bold text-lg text-gray-800">
+        <button onClick={handlePrevMonth} className="p-2 rounded-full hover:bg-bg-secondary">&lt;</button>
+        <div className="font-bold text-lg text-text-headings">
           {monthNames[month]} {year}
         </div>
-        <button onClick={handleNextMonth} className="p-2 rounded-full hover:bg-gray-100">&gt;</button>
+        <button onClick={handleNextMonth} className="p-2 rounded-full hover:bg-bg-secondary">&gt;</button>
       </div>
       <div className="grid grid-cols-7 gap-1">
         {daysOfWeek.map(day => (
-          <div key={day} className="text-center font-semibold text-sm text-gray-500">{day}</div>
+          <div key={day} className="text-center font-semibold text-sm text-text-body">{day}</div>
         ))}
         {renderDays()}
       </div>

@@ -17,6 +17,9 @@ const Appointment: React.FC = () => {
     const [isCalendarOpen, setIsCalendarOpen] = useState(false); // State to control calendar visibility
 
     const allServices = [...MAIN_SERVICES.map(s => s.name), ...OTHER_SERVICES];
+    
+    const inputStyles = "mt-1 block w-full px-4 py-3 bg-bg-primary border border-border-color rounded-md shadow-sm focus:outline-none focus:ring-brand-accent focus:border-brand-accent";
+    const labelStyles = "block text-sm font-medium text-text-body mb-1";
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -82,40 +85,39 @@ ${formData.message || 'No message.'}
     };
 
     return (
-        <section id="appointment" className="py-24 bg-brand-blue-light/30">
+        <section id="appointment" className="py-24 bg-bg-primary">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl font-bold text-brand-blue-dark">Request an Appointment</h2>
-                    <p className="text-gray-600 mt-2 text-lg">Fill out the form below and we'll get back to you shortly.</p>
+                    <h2 className="text-3xl font-bold text-text-headings">Request an Appointment</h2>
+                    <p className="text-text-body mt-2 text-lg">Fill out the form below and we'll get back to you shortly.</p>
                 </div>
-                <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-8 md:p-12">
+                <div className="max-w-4xl mx-auto bg-bg-primary rounded-xl shadow-2xl border border-border-color p-8 md:p-12">
                     <form onSubmit={handleSubmit} noValidate>
                         <div className="grid md:grid-cols-2 gap-x-8 gap-y-6">
-                            {/* Form fields here */}
                             <div>
-                                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                                <input type="text" name="name" id="name" value={formData.name} onChange={handleChange} required className="mt-1 block w-full px-4 py-3 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand-blue focus:border-brand-blue" />
+                                <label htmlFor="name" className={labelStyles}>Full Name</label>
+                                <input type="text" name="name" id="name" value={formData.name} onChange={handleChange} required className={inputStyles} />
                                 {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                             </div>
                             <div>
-                                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                                <input type="tel" name="phone" id="phone" value={formData.phone} onChange={handleChange} required className="mt-1 block w-full px-4 py-3 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand-blue focus:border-brand-blue" />
+                                <label htmlFor="phone" className={labelStyles}>Phone Number</label>
+                                <input type="tel" name="phone" id="phone" value={formData.phone} onChange={handleChange} required className={inputStyles} />
                                 {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                             </div>
                             <div>
-                                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address (Optional)</label>
-                                <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} className="mt-1 block w-full px-4 py-3 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand-blue focus:border-brand-blue" />
+                                <label htmlFor="email" className={labelStyles}>Email Address (Optional)</label>
+                                <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} className={inputStyles} />
                             </div>
                             <div>
-                                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">Preferred Service</label>
-                                <select name="service" id="service" value={formData.service} onChange={handleChange} className="mt-1 block w-full px-4 py-3 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand-blue focus:border-brand-blue">
+                                <label htmlFor="service" className={labelStyles}>Preferred Service</label>
+                                <select name="service" id="service" value={formData.service} onChange={handleChange} className={inputStyles}>
                                     {allServices.map(serviceName => (
                                         <option key={serviceName} value={serviceName}>{serviceName}</option>
                                     ))}
                                 </select>
                             </div>
                             <div className="relative">
-                                <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-1">Preferred Date</label>
+                                <label htmlFor="date" className={labelStyles}>Preferred Date</label>
                                 <input 
                                     type="text" 
                                     name="date" 
@@ -124,7 +126,7 @@ ${formData.message || 'No message.'}
                                     onFocus={() => setIsCalendarOpen(true)}
                                     readOnly 
                                     placeholder="Select a date"
-                                    className="mt-1 block w-full px-4 py-3 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand-blue focus:border-brand-blue cursor-pointer" 
+                                    className={`${inputStyles} cursor-pointer`} 
                                 />
                                 {isCalendarOpen && (
                                     <Calendar 
@@ -135,19 +137,19 @@ ${formData.message || 'No message.'}
                                 )}
                             </div>
                              <div>
-                                <label htmlFor="time" className="block text-sm font-medium text-gray-700 mb-1">Preferred Time</label>
-                                <select name="time" id="time" value={formData.time} onChange={handleChange} className="mt-1 block w-full px-4 py-3 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand-blue focus:border-brand-blue">
+                                <label htmlFor="time" className={labelStyles}>Preferred Time</label>
+                                <select name="time" id="time" value={formData.time} onChange={handleChange} className={inputStyles}>
                                     <option>Morning (8am - 12pm)</option>
                                     <option>Afternoon (12pm - 6pm)</option>
                                 </select>
                             </div>
                              <div className="md:col-span-2">
-                                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Additional Message (Optional)</label>
-                                <textarea name="message" id="message" rows={4} value={formData.message} onChange={handleChange} className="mt-1 block w-full px-4 py-3 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand-blue focus:border-brand-blue"></textarea>
+                                <label htmlFor="message" className={labelStyles}>Additional Message (Optional)</label>
+                                <textarea name="message" id="message" rows={4} value={formData.message} onChange={handleChange} className={inputStyles}></textarea>
                             </div>
                         </div>
                         <div className="mt-8 text-center">
-                            <button type="submit" disabled={isSubmitting} className="w-full max-w-xs text-center bg-gradient-to-r from-brand-blue to-blue-500 text-white px-8 py-3 rounded-full font-bold text-lg hover:from-blue-500 hover:to-brand-blue transition-all duration-300 transform hover:scale-105 shadow-lg disabled:bg-gray-400 disabled:cursor-not-allowed">
+                            <button type="submit" disabled={isSubmitting} className="w-full max-w-xs text-center bg-brand-accent text-white px-8 py-3 rounded-lg font-bold text-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg disabled:bg-gray-400 disabled:cursor-not-allowed">
                                 {isSubmitting ? 'Sending...' : 'Send Request via WhatsApp'}
                             </button>
                         </div>

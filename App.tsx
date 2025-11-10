@@ -13,7 +13,7 @@ import FloatingSocials from './components/FloatingSocials';
 
 const App: React.FC = () => {
   return (
-    <div className="bg-white font-sans text-gray-800">
+    <div className="bg-bg-primary font-sans text-text-body">
       <Header />
       <main>
         <Hero />

@@ -45,7 +45,7 @@ const FloatingSocials: React.FC = () => {
             <div className="flex flex-col items-center space-y-4">
                  {/* Social Links */}
                 <div className={`flex flex-col items-center space-y-4 transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 invisible'}`}>
-                    {socialLinks.map((link, index) => (
+                    {socialLinks.map((link) => (
                         <a
                             key={link.name}
                             href={link.href}
@@ -62,7 +62,7 @@ const FloatingSocials: React.FC = () => {
                 {/* Main FAB */}
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="bg-brand-blue text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl focus:outline-none transition-all duration-300 hover:scale-110 hover:bg-brand-blue-dark"
+                    className="bg-brand-accent text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl focus:outline-none transition-all duration-300 hover:scale-110 hover:bg-opacity-90"
                     aria-label="Toggle contact options"
                 >
                     <div className="transform transition-transform duration-300">

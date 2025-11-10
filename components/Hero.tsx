@@ -1,25 +1,54 @@
 import React from 'react';
 
 const Hero: React.FC = () => {
+  const stats = [
+    { value: '5,000+', label: 'Happy Smiles' },
+    { value: '15+', label: 'Years of Experience' },
+  ];
+
   return (
-    <section id="home" className="relative h-[85vh] min-h-[550px] flex items-center justify-center text-white overflow-hidden">
-      {/* Photo of smiling African dental professionals. */}
-      <div
-        className="absolute inset-0 bg-cover bg-center scale-105"
-        style={{ backgroundImage: "url('https://source.unsplash.com/1920x1080/?african-dentist-team,smile')" }}
-      ></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-800/60 to-red-500/40"></div>
-      <div className="relative z-10 text-center px-6">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 opacity-0 animate-fade-in-down">Your Smile, Our Priority.</h1>
-        <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 opacity-0 animate-fade-in-up">
-          At White Emerald Dental Care, we specialize in beautifying smiles and maintaining your dental health.
-        </p>
-        <a
-          href="#appointment"
-          className="bg-gradient-to-r from-brand-red to-red-500 text-white px-8 py-3 rounded-full font-bold text-lg hover:from-red-500 hover:to-brand-red transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl inline-block"
-        >
-          Book Appointment
-        </a>
+    <section id="home" className="bg-bg-primary pt-32 pb-16 md:pt-40 md:pb-24">
+      <div className="container mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          
+          {/* Left Column: Text Content */}
+          <div className="text-center lg:text-left">
+            <h1 className="text-4xl lg:text-6xl font-extrabold text-text-headings mb-6 leading-tight animate-fade-in-down">
+              Fix Your Smile, <br />
+              Restore Your Confidence
+            </h1>
+            <p className="text-lg text-text-body max-w-lg mx-auto lg:mx-0 mb-8 animate-fade-in-up">
+              At White Emerald Dental Care, we specialize in beautifying smiles, maintaining your dental health, and helping you improve your appearance.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <a
+                href="#appointment"
+                className="bg-brand-accent text-white px-8 py-3 rounded-lg font-bold text-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto text-center"
+              >
+                Book an Appointment
+              </a>
+               {/* Stats Section */}
+              <div className="flex items-center justify-center lg:justify-start gap-x-6">
+                {stats.map(stat => (
+                  <div key={stat.label} className="text-center">
+                    <p className="text-3xl font-bold text-text-headings">{stat.value}</p>
+                    <p className="text-text-body tracking-wide text-sm">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Image */}
+          <div className="mt-12 lg:mt-0 animate-fade-in-up">
+            <img 
+              src="https://source.unsplash.com/800x1000/?african-woman-perfect-smile,close-up,happy"
+              alt="A woman with a bright, confident smile"
+              className="rounded-3xl shadow-2xl w-full h-auto object-cover max-h-[500px] object-top"
+            />
+          </div>
+
+        </div>
       </div>
     </section>
   );

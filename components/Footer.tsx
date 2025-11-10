@@ -1,56 +1,115 @@
 import React from 'react';
 
-const InstagramIcon = () => (
-    <svg fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.85s.012-3.584.07-4.85c.149-3.227 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163m0 1.441c-3.171 0-3.535.011-4.774.068-2.694.122-3.633.452-4.328 1.148-.695.695-1.025 1.633-1.148 4.328-.057 1.239-.068 1.603-.068 4.774s.011 3.535.068 4.774c.122 2.694.452 3.633 1.148 4.328.695.695 1.633 1.025 4.328 1.148 1.239.057 1.603.068 4.774.068s3.535-.011 4.774-.068c2.694-.122 3.633-.452 4.328-1.148.695-.695 1.025-1.633 1.148-4.328.057-1.239.068-1.603.068-4.774s-.011-3.535-.068-4.774c-.122-2.694-.452-3.633-1.148-4.328-.695-.695-1.633-1.025-4.328-1.148C15.535 3.614 15.171 3.604 12 3.604zM12 8.25c-2.071 0-3.75 1.679-3.75 3.75s1.679 3.75 3.75 3.75 3.75-1.679 3.75-3.75S14.071 8.25 12 8.25zm0 6c-1.242 0-2.25-1.008-2.25-2.25s1.008-2.25 2.25-2.25 2.25 1.008 2.25 2.25-1.008 2.25-2.25 2.25zm4.804-6.418c-.796 0-1.441.645-1.441 1.441s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.441-1.441-1.441z"/></svg>
+const Logo = () => (
+    <img 
+        src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAJAAkADASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECA//EABgQAQEBAQEAAAAAAAAAAAAAAAABEUEh/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAECAwT/xAAXEQEBAQEAAAAAAAAAAAAAAAAAAREh/9oADAMBAAIRAxEBAx8A/tIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgq-DN/li8-Z" 
+        alt="White Emerald Dental Care Logo" 
+        className="h-14 w-auto mb-4" 
+    />
 );
 
-const FacebookIcon = () => (
-    <svg fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+const LocationIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+    </svg>
 );
 
+const PhoneIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+    </svg>
+);
+
+const EmailIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+    </svg>
+);
 
 const Footer: React.FC = () => {
-  return (
-    <footer className="bg-gray-800 text-white">
-      <div className="container mx-auto px-6 py-12">
-        <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
-          <div>
-            <h3 className="text-2xl font-bold mb-2">White Emerald</h3>
-            <p className="text-gray-300">Your smile, our priority. Providing exceptional dental care in Ilesa, Osun State.</p>
-          </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-3">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><a href="#about" className="hover:text-brand-red transition-colors">About Us</a></li>
-              <li><a href="#services" className="hover:text-brand-red transition-colors">Services</a></li>
-              <li><a href="#team" className="hover:text-brand-red transition-colors">Our Team</a></li>
-              <li><a href="#appointment" className="hover:text-brand-red transition-colors">Book Appointment</a></li>
-              <li><a href="#contact" className="hover:text-brand-red transition-colors">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-3">Contact Info</h4>
-            <ul className="space-y-2 text-gray-300">
-                <li>+234 810 5001 567</li>
-                <li>contact@wedc.com.ng</li>
-                <li>Achiever Plaza Idi Ayan, Ilesa</li>
-            </ul>
-            <div className="mt-6 flex justify-center space-x-6 md:justify-start">
-              <a href="https://www.instagram.com/white_emerald_dental_care/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-300 hover:text-white transition-colors">
-                <InstagramIcon />
-              </a>
-              <a href="https://www.facebook.com/p/white_emerald_dental_care-100082744182240/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-300 hover:text-white transition-colors">
-                <FacebookIcon />
-              </a>
+    const companyLinks = [
+        { name: 'Home', href: '#home' },
+        { name: 'About Us', href: '#about' },
+        { name: 'Services', href: '#services' },
+        { name: 'Contact', href: '#contact' },
+    ];
+
+    const serviceLinks = [
+        'Teeth Whitening', 'Orthodontics', 'Dental Implants', 
+        'Scaling & Polishing', 'Dental Crowns', 'Composite Fillings'
+    ];
+
+    return (
+        <footer className="bg-text-headings text-gray-300">
+            <div className="container mx-auto px-6 py-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                    {/* Column 1: Logo & About */}
+                    <div className="space-y-4">
+                        <Logo />
+                        <p className="text-sm leading-relaxed text-gray-400">
+                            At White Emerald Dental Care, we specialize in beautifying smiles and maintaining your dental health for patients of all ages.
+                        </p>
+                    </div>
+
+                    {/* Column 2: Company */}
+                    <div>
+                        <h4 className="text-lg font-bold text-white mb-4">Company</h4>
+                        <ul className="space-y-3">
+                            {companyLinks.map(link => (
+                                <li key={link.name}>
+                                    <a href={link.href} className="hover:text-white transition-colors">{link.name}</a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Column 3: Services */}
+                    <div>
+                        <h4 className="text-lg font-bold text-white mb-4">Our Services</h4>
+                        <ul className="space-y-3">
+                            {serviceLinks.map(service => (
+                                <li key={service}>
+                                    <a href="#services" className="hover:text-white transition-colors">{service}</a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Column 4: Contact Us */}
+                    <div>
+                        <h4 className="text-lg font-bold text-white mb-4">Contact Us</h4>
+                        <ul className="space-y-4">
+                            <li className="flex items-start space-x-3">
+                                <LocationIcon />
+                                <div>
+                                    <span className="font-semibold text-white block">Clinic Location</span>
+                                    <span>Achiever Plaza Idi Ayan, Ilesa, Osun State</span>
+                                </div>
+                            </li>
+                            <li className="flex items-start space-x-3">
+                                <PhoneIcon />
+                                <div>
+                                    <span className="font-semibold text-white block">Call Us</span>
+                                    <a href="tel:+2348105001567" className="hover:text-white transition-colors">+234 810 5001 567</a>
+                                </div>
+                            </li>
+                            <li className="flex items-start space-x-3">
+                                <EmailIcon />
+                                <div>
+                                    <span className="font-semibold text-white block">Send a Message</span>
+                                    <a href="mailto:contact@wedc.com.ng" className="hover:text-white transition-colors">contact@wedc.com.ng</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className="bg-black/20 py-4 text-center">
-        <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} White Emerald Dental Care. All Rights Reserved.</p>
-      </div>
-    </footer>
-  );
+            <div className="border-t border-white/10 py-6 text-center">
+                <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} White Emerald Dental Care. All Rights Reserved.</p>
+            </div>
+        </footer>
+    );
 };
 
 export default Footer;
