@@ -63,13 +63,13 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Dr. Ogunwande A. T.',
     title: 'Director, Consultant Surgeon',
     bio: 'With over 15 years of experience, Dr. Ogunwande leads our team with a passion for surgical excellence and patient-centered care.',
-    imageUrl: 'https://i.ibb.co/zhGhXR8N/img1.jpg',
+    imageUrl: 'https://i.ibb.co/G3t1p7Dp/IMG-20250607-WA0013-removebg-preview.png',
   },
   {
     name: 'Oluwafemi A. K. (RDTh.)',
     title: 'Principal Officer',
     bio: 'Oluwafemi ensures our clinic operates smoothly, focusing on patient comfort and providing a welcoming experience for everyone.',
-    imageUrl: 'https://i.ibb.co/3K3rN6x/img2.jpg',
+    imageUrl: 'https://i.ibb.co/CpXxBF1D/IMG-20250607-WA0014-removebg-preview-1.png',
   },
 ];
 

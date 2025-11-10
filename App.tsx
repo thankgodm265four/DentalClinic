@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FloatingSocials from './components/FloatingSocials';
 import ServiceDetail from './components/ServiceDetail';
+import Gallery from './components/Gallery';
 import type { Service } from './types';
 
 const App: React.FC = () => {
@@ -48,6 +49,7 @@ const App: React.FC = () => {
             <About />
             <Services onSelectService={handleSelectService} />
             <Team />
+            <Gallery />
             <FAQ />
             <Appointment />
             <Contact />
