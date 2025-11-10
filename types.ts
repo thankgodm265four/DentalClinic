@@ -13,7 +13,7 @@ export interface Service {
   icon: React.ReactNode;
   detailedDescription: string;
   benefits: string[];
-  imageUrl: string; // Kept for potential future use, but unused for icon-based detail pages
+  imageUrl: string;
 }
 
 export interface FAQItem {
@@ -21,7 +21,7 @@ export interface FAQItem {
   answer: string;
 }
 
-// FIX: Added GalleryImage interface for the Gallery component.
+// FIX: Add GalleryImage interface for the smile gallery data.
 export interface GalleryImage {
   beforeUrl: string;
   afterUrl: string;
