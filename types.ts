@@ -10,8 +10,10 @@ export interface TeamMember {
 export interface Service {
   name: string;
   description: string;
-  // FIX: Replaced JSX.Element with React.ReactNode to resolve "Cannot find namespace 'JSX'" error. This requires importing React types.
   icon: React.ReactNode;
+  detailedDescription: string;
+  benefits: string[];
+  imageUrl: string;
 }
 
 export interface FAQItem {
@@ -19,6 +21,7 @@ export interface FAQItem {
   answer: string;
 }
 
+// FIX: Add GalleryImage interface for the smile gallery data.
 export interface GalleryImage {
   beforeUrl: string;
   afterUrl: string;

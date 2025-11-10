@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Hero: React.FC = () => {
   const stats = [
     { value: '5,000+', label: 'Happy Smiles' },
     { value: '15+', label: 'Years of Experience' },
   ];
+
+  const heroImages = [
+    'https://i.ibb.co/CBrbVjM/dapp-1.png',        // Original smiling woman
+    'https://i.ibb.co/gb6K7F8/dapp-clinic-env.png', // New clinic environment
+    'https://i.ibb.co/KxtgrVp/dapp-dentist-patient.png',// New dentist with patient
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 1000); // Change image every 1 second as requested
+
+    return () => clearInterval(intervalId);
+  }, [heroImages.length]);
 
   return (
     <section id="home" className="bg-bg-primary pt-32 pb-16 md:pt-40 md:pb-24">
@@ -41,11 +57,16 @@ const Hero: React.FC = () => {
 
           {/* Right Column: Image */}
           <div className="mt-12 lg:mt-0 animate-fade-in-up">
-            <img 
-              src="https://source.unsplash.com/800x1000/?african-woman-perfect-smile,close-up,happy"
-              alt="A woman with a bright, confident smile"
-              className="rounded-3xl shadow-2xl w-full h-auto object-cover max-h-[500px] object-top"
-            />
+            <div className="relative w-full h-[500px] rounded-3xl shadow-2xl overflow-hidden">
+              {heroImages.map((src, index) => (
+                <img
+                  key={index}
+                  src={src}
+                  alt={`Hero image ${index + 1}`}
+                  className={`absolute top-0 left-0 w-full h-full object-cover object-top transition-opacity duration-1000 ease-in-out ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'}`}
+                />
+              ))}
+            </div>
           </div>
 
         </div>

@@ -14,7 +14,7 @@ const About: React.FC = () => {
           <div>
             {/* Photo of the friendly, African clinic team. */}
             <img
-              src="https://source.unsplash.com/600x400/?african-dentists,clinic,friendly"
+              src="https://i.ibb.co/gJFk4v6/dapp-2.png"
               alt="The friendly team at White Emerald Dental Care"
               className="rounded-xl shadow-2xl w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
             />

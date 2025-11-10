@@ -2,111 +2,74 @@ import React from 'react';
 
 const Logo = () => (
     <img 
-        src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAJAAkADASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECA//EABgQAQEBAQEAAAAAAAAAAAAAAAABEUEh/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAECAwT/xAAXEQEBAQEAAAAAAAAAAAAAAAAAAREh/9oADAMBAAIRAxEBAx8A/tIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgqCoKgq-DN/li8-Z" 
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARAAAABABAMAAAB1HU02AAAAGFBMVEVHcEz/AAD/AAD/AAD/AAD/AAD/AAD9+v32iP1iAAAACHRSTlMAv0Bg768QkF/1UAAAA9pJREFUeNrt2M2R20gYBvB/B5iAjsBJ6AicgI7ASegInICcgI7AScgInICcgI7ASegInICcwD/QG5h17s6a9/P88r2f2SWzV+JGl4YAAAAAAAAAAAAAAADgEaXl8p68d4/P8b3e/RgeD8Pjcfyq/D083t49wvvJ8/j5/C88Pif+vt5gPPl5e/z/D48H8bN/fD8+4v3n6+3j8+sB+Pl4vV5P+L1eLy/fA8A/D++P+HsA8vbw8vDx7A+AHy8vl8v58+sB+Pl4vl7v58+P5/eP4v2f8f55/yB+H18fH+Lz5/19H/H+9vgA8o/A/h5vL4B+Pp7ePj7eAHi8Pz7e3z4+P+L3AfD+4g+A/y/i+f0A8H7xfXz8+vj4eL5e7+fP+/t7vD/e3z9g/Dx+H/e7gPh4+wDk4eXh5eHxA+A/eLz+4v3j/QP4/eL7+Pj18fHweLyA9+f9/T3eH+8/YOzh4x+Q3+8B4OXh8Xg8vQAeL48f8Xp8/Dj+/gB8Hw8fH7/eH78+Pp7f3//D+8f3D/Dx8fX19f75fQvw8f75f/0B+L2/B4D7+f0B+L1/gN/vx+f3D2A+/38/AHw8/oAPgJfL8/0B+D0+vj4+f39/gA/A+3uA/y/i+f1j+H1/fw9/APDx8f75egvw8fX19fHx+f0B+H18fDweHy/vx9fHx9fHx8f7B2z8+v4AfL0+AN8HwNvl8//6AwDAv/wCeAA8Pl4AL5fHx8f78/4+AD4+Pz/g8wEAz/v7D/Dx+vPx8f4BfL3eHy/fA/Dx+P19vA8A7+fHx+v1APj5/AF83z8Anj8AD7+f7+/v8/oBeL1fL8/H5/N6ff+A3+f3+3u8P+ID0Ofz+/t7vD/iA9DH4+P9/f0D+PyA9wH4+P+IH0Cfz+f3D/Dx+QEAz+fzA/Dx+fn/9wH4AHi9Pl4v3+f19fHx8fHx+QH4eXy9Xo/v7x+Aj1cAAAAAAAAAAAAAAAAAAAAAAOA/q9Wf5/V4eT0eXn4ev16P5+v58vPx8/L1eDy+vu4/8Pl6PH8v1+v1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAfw9Pq4/Pyej183o/n4+Pj+fV+fLy8vL1ejwDAx8Pj8foD+Pl6PH4fL8fHx/P1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAODf/gL4s+k9S2G37QAAAABJRU5ErkJggg==" 
         alt="White Emerald Dental Care Logo" 
-        className="h-14 w-auto mb-4" 
+        className="h-10 w-auto" 
     />
 );
 
-const LocationIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-    </svg>
-);
-
-const PhoneIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-    </svg>
-);
-
-const EmailIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-    </svg>
-);
-
 const Footer: React.FC = () => {
-    const companyLinks = [
-        { name: 'Home', href: '#home' },
-        { name: 'About Us', href: '#about' },
-        { name: 'Services', href: '#services' },
-        { name: 'Contact', href: '#contact' },
-    ];
-
     const serviceLinks = [
-        'Teeth Whitening', 'Orthodontics', 'Dental Implants', 
-        'Scaling & Polishing', 'Dental Crowns', 'Composite Fillings'
+        'Teeth Whitening', 'Scaling & Polishing', 'Orthodontics', 'Dental Implants'
     ];
 
     return (
-        <footer className="bg-text-headings text-gray-300">
+        <footer className="bg-bg-primary border-t-4 border-brand-accent">
             <div className="container mx-auto px-6 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-                    {/* Column 1: Logo & About */}
-                    <div className="space-y-4">
-                        <Logo />
-                        <p className="text-sm leading-relaxed text-gray-400">
-                            At White Emerald Dental Care, we specialize in beautifying smiles and maintaining your dental health for patients of all ages.
-                        </p>
-                    </div>
+                <div className="mb-12">
+                    <Logo />
+                    <p className="mt-4 max-w-sm text-text-body">
+                        Your smile is our priority. We specialize in beautifying smiles and maintaining your dental health.
+                    </p>
+                </div>
 
-                    {/* Column 2: Company */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    {/* Column 1: Services */}
                     <div>
-                        <h4 className="text-lg font-bold text-white mb-4">Company</h4>
-                        <ul className="space-y-3">
-                            {companyLinks.map(link => (
-                                <li key={link.name}>
-                                    <a href={link.href} className="hover:text-white transition-colors">{link.name}</a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* Column 3: Services */}
-                    <div>
-                        <h4 className="text-lg font-bold text-white mb-4">Our Services</h4>
+                        <h4 className="text-lg font-bold text-text-headings mb-4">Services</h4>
                         <ul className="space-y-3">
                             {serviceLinks.map(service => (
                                 <li key={service}>
-                                    <a href="#services" className="hover:text-white transition-colors">{service}</a>
+                                    <a href="#services" className="text-text-body hover:text-brand-accent transition-colors">{service}</a>
                                 </li>
                             ))}
                         </ul>
                     </div>
 
-                    {/* Column 4: Contact Us */}
+                    {/* Column 2: Hours */}
                     <div>
-                        <h4 className="text-lg font-bold text-white mb-4">Contact Us</h4>
-                        <ul className="space-y-4">
-                            <li className="flex items-start space-x-3">
-                                <LocationIcon />
-                                <div>
-                                    <span className="font-semibold text-white block">Clinic Location</span>
-                                    <span>Achiever Plaza Idi Ayan, Ilesa, Osun State</span>
-                                </div>
-                            </li>
-                            <li className="flex items-start space-x-3">
-                                <PhoneIcon />
-                                <div>
-                                    <span className="font-semibold text-white block">Call Us</span>
-                                    <a href="tel:+2348105001567" className="hover:text-white transition-colors">+234 810 5001 567</a>
-                                </div>
-                            </li>
-                            <li className="flex items-start space-x-3">
-                                <EmailIcon />
-                                <div>
-                                    <span className="font-semibold text-white block">Send a Message</span>
-                                    <a href="mailto:contact@wedc.com.ng" className="hover:text-white transition-colors">contact@wedc.com.ng</a>
-                                </div>
-                            </li>
+                        <h4 className="text-lg font-bold text-text-headings mb-4">Hours</h4>
+                        <ul className="space-y-3 text-text-body">
+                            <li><span className="font-semibold text-text-headings">Mon - Sat:</span> 8am - 6pm</li>
+                            <li><span className="font-semibold text-text-headings">Sun:</span> 12pm - 6pm</li>
                         </ul>
+                    </div>
+
+                    {/* Column 3: Newsletter */}
+                    <div>
+                        <h4 className="text-lg font-bold text-text-headings mb-4">Newsletter</h4>
+                        <p className="text-text-body mb-4">Discover new offers and stay up to date.</p>
+                        <form onSubmit={(e) => e.preventDefault()} className="flex items-center">
+                            <input 
+                                type="email" 
+                                placeholder="Enter your email address" 
+                                className="w-full px-4 py-3 bg-bg-secondary border border-border-color rounded-l-lg focus:outline-none focus:ring-2 focus:ring-brand-accent"
+                            />
+                            <button 
+                                type="submit" 
+                                aria-label="Subscribe to newsletter"
+                                className="bg-brand-accent text-white px-4 py-3 rounded-r-lg hover:bg-opacity-90 transition-colors"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
-            <div className="border-t border-white/10 py-6 text-center">
-                <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} White Emerald Dental Care. All Rights Reserved.</p>
+            <div className="border-t border-border-color py-6 text-center">
+                <p className="text-sm text-text-body">&copy; {new Date().getFullYear()} White Emerald Dental Care. All Rights Reserved.</p>
             </div>
         </footer>
     );

@@ -1,4 +1,5 @@
 import React from 'react';
+// FIX: Import the GalleryImage type.
 import type { TeamMember, Service, FAQItem, GalleryImage } from './types';
 
 // Icons for Services
@@ -46,21 +47,33 @@ export const MAIN_SERVICES: Service[] = [
     name: 'Teeth Whitening',
     description: 'Brighten your smile safely and effectively with our professional whitening services.',
     icon: <SparklesIcon />,
+    detailedDescription: 'Our professional teeth whitening service is one of the quickest and most effective ways to enhance your smile. We use advanced, safe whitening agents to remove stubborn stains caused by coffee, tea, tobacco, and aging, revealing a brighter, more youthful smile in just one visit.',
+    benefits: ['Dramatically whiter teeth', 'Boosted self-confidence', 'Fast and noticeable results', 'Safe procedure under professional supervision'],
+    imageUrl: 'https://i.ibb.co/3YP6YMfm/whitening-smile.png',
   },
   {
     name: 'Scaling and Polishing',
     description: 'Remove stains and plaque for a cleaner, fresher smile and improved gum health.',
     icon: <ToothIcon />,
+    detailedDescription: 'Scaling and polishing is a routine dental cleaning procedure that forms the foundation of good oral hygiene. Our therapists meticulously remove hardened plaque (tartar) and surface stains, then polish your teeth to a smooth, shiny finish. This treatment not only makes your smile look great but is crucial for preventing gum disease.',
+    benefits: ['Prevents cavities and gum disease', 'Removes tartar and plaque buildup', 'Freshens breath', 'Results in a brighter, cleaner-feeling smile'],
+    imageUrl: 'https://i.ibb.co/mNyqRzV/dapp-3.png',
   },
   {
     name: 'Teeth Replacement',
     description: 'Replace missing or damaged teeth with modern, natural-looking options.',
     icon: <PlusCircleIcon />,
+    detailedDescription: 'Losing a tooth can affect your confidence, speech, and ability to chew. We offer a range of modern teeth replacement solutions, including dental implants, bridges, and dentures. Our experts will help you choose the best option to restore your smile’s function and appearance seamlessly.',
+    benefits: ['Restores chewing ability and speech', 'Prevents adjacent teeth from shifting', 'Provides a natural and long-lasting look', 'Improves facial structure and confidence'],
+    imageUrl: 'https://source.unsplash.com/1200x800/?dental-implant,dentistry,procedure',
   },
   {
     name: 'Orthodontics',
     description: 'Align and straighten teeth with advanced braces and appliances for all ages.',
     icon: <AdjustmentsIcon />,
+    detailedDescription: 'Orthodontic treatment goes beyond aesthetics; it improves the alignment of your teeth and jaw for better oral health. We provide solutions for both children and adults, including traditional braces and modern clear aligners, to correct issues like crooked teeth, overbites, and underbites, giving you a perfectly aligned and functional smile.',
+    benefits: ['Straighter, more attractive smile', 'Easier cleaning and better oral hygiene', 'Corrects bite and jaw alignment issues', 'Reduces wear and tear on teeth'],
+    imageUrl: 'https://i.ibb.co/b3D03tQ/dapp-4.png',
   },
 ];
 
@@ -100,25 +113,26 @@ export const FAQ_DATA: FAQItem[] = [
     },
 ];
 
+// FIX: Add and export GALLERY_IMAGES to resolve the import error in Gallery.tsx.
 export const GALLERY_IMAGES: GalleryImage[] = [
-    {
-        beforeUrl: 'https://source.unsplash.com/600x400/?african-woman-sad-smile',
-        afterUrl: 'https://source.unsplash.com/600x400/?african-woman-perfect-smile',
-        description: 'Teeth Whitening',
-    },
-    {
-        beforeUrl: 'https://source.unsplash.com/600x400/?african-man-mouth-pain',
-        afterUrl: 'https://source.unsplash.com/600x400/?african-man-healthy-smile',
-        description: 'Composite Fillings',
-    },
-    {
-        beforeUrl: 'https://source.unsplash.com/600x400/?teenager-braces-unhappy',
-        afterUrl: 'https://source.unsplash.com/600x400/?african-teenager-perfect-smile',
-        description: 'Orthodontics',
-    },
-     {
-        beforeUrl: 'https://source.unsplash.com/600x400/?african-person-hiding-smile',
-        afterUrl: 'https://source.unsplash.com/600x400/?african-person-confident-smile',
-        description: 'Dental Crowns',
-    },
+  {
+    beforeUrl: 'https://source.unsplash.com/600x600/?yellow-teeth,sad-smile',
+    afterUrl: 'https://source.unsplash.com/600x600/?white-teeth,happy-smile',
+    description: 'Teeth Whitening Transformation',
+  },
+  {
+    beforeUrl: 'https://source.unsplash.com/600x600/?crooked-teeth,unhappy',
+    afterUrl: 'https://source.unsplash.com/600x600/?straight-teeth,confident-smile',
+    description: 'Orthodontic Alignment',
+  },
+  {
+    beforeUrl: 'https://source.unsplash.com/600x600/?missing-tooth,smile-gap',
+    afterUrl: 'https://source.unsplash.com/600x600/?perfect-smile,dental-implant',
+    description: 'Dental Implant Restoration',
+  },
+  {
+    beforeUrl: 'https://source.unsplash.com/600x600/?chipped-tooth,closeup',
+    afterUrl: 'https://source.unsplash.com/600x600/?veneers,perfect-teeth',
+    description: 'Veneers for a Flawless Finish',
+  },
 ];
