@@ -73,13 +73,13 @@ const Calendar: React.FC<CalendarProps> = ({ selectedDate, onDateSelect, onClose
       let className = "text-center p-2 rounded-full cursor-pointer transition-colors duration-200";
       
       if (isPast) {
-        className += " text-gray-400 cursor-not-allowed";
+        className += " text-gray-300 cursor-not-allowed line-through";
       } else if (isSelected) {
-        className += " bg-brand-teal text-white font-bold";
+        className += " bg-brand-blue text-white font-bold shadow-lg";
       } else if (isToday) {
-        className += " bg-brand-teal-light text-brand-teal-dark";
+        className += " bg-brand-red-light text-brand-red font-bold";
       } else {
-        className += " hover:bg-gray-200";
+        className += " hover:bg-brand-blue-light";
       }
       
       days.push(

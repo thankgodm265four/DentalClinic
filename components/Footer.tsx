@@ -11,35 +11,35 @@ const FacebookIcon = () => (
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-brand-teal-dark text-white">
+    <footer className="bg-gray-800 text-white">
       <div className="container mx-auto px-6 py-12">
         <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
           <div>
             <h3 className="text-2xl font-bold mb-2">White Emerald</h3>
-            <p className="text-teal-100">Your smile, our priority. Providing exceptional dental care in Ilesa, Osun State.</p>
+            <p className="text-gray-300">Your smile, our priority. Providing exceptional dental care in Ilesa, Osun State.</p>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-3">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="#about" className="hover:text-teal-200 transition-colors">About Us</a></li>
-              <li><a href="#services" className="hover:text-teal-200 transition-colors">Services</a></li>
-              <li><a href="#team" className="hover:text-teal-200 transition-colors">Our Team</a></li>
-              <li><a href="#appointment" className="hover:text-teal-200 transition-colors">Book Appointment</a></li>
-              <li><a href="#contact" className="hover:text-teal-200 transition-colors">Contact</a></li>
+              <li><a href="#about" className="hover:text-brand-red transition-colors">About Us</a></li>
+              <li><a href="#services" className="hover:text-brand-red transition-colors">Services</a></li>
+              <li><a href="#team" className="hover:text-brand-red transition-colors">Our Team</a></li>
+              <li><a href="#appointment" className="hover:text-brand-red transition-colors">Book Appointment</a></li>
+              <li><a href="#contact" className="hover:text-brand-red transition-colors">Contact</a></li>
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-3">Contact Info</h4>
-            <ul className="space-y-2 text-teal-100">
+            <ul className="space-y-2 text-gray-300">
                 <li>+234 810 5001 567</li>
                 <li>contact@wedc.com.ng</li>
                 <li>Achiever Plaza Idi Ayan, Ilesa</li>
             </ul>
             <div className="mt-6 flex justify-center space-x-6 md:justify-start">
-              <a href="https://www.instagram.com/white_emerald_dental_care/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-teal-100 hover:text-white transition-colors">
+              <a href="https://www.instagram.com/white_emerald_dental_care/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-300 hover:text-white transition-colors">
                 <InstagramIcon />
               </a>
-              <a href="https://www.facebook.com/p/white_emerald_dental_care-100082744182240/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-teal-100 hover:text-white transition-colors">
+              <a href="https://www.facebook.com/p/white_emerald_dental_care-100082744182240/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-300 hover:text-white transition-colors">
                 <FacebookIcon />
               </a>
             </div>
@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div className="bg-black/20 py-4 text-center">
-        <p className="text-sm text-teal-200">&copy; {new Date().getFullYear()} White Emerald Dental Care. All Rights Reserved.</p>
+        <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} White Emerald Dental Care. All Rights Reserved.</p>
       </div>
     </footer>
   );

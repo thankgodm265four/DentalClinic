@@ -62,7 +62,7 @@ const FloatingSocials: React.FC = () => {
                 {/* Main FAB */}
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="bg-brand-teal text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl focus:outline-none transition-all duration-300 hover:scale-110 hover:bg-brand-teal-dark"
+                    className="bg-brand-blue text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl focus:outline-none transition-all duration-300 hover:scale-110 hover:bg-brand-blue-dark"
                     aria-label="Toggle contact options"
                 >
                     <div className="transform transition-transform duration-300">

@@ -21,8 +21,8 @@ const App: React.FC = () => {
         <Services />
         <Team />
         <Gallery />
-        <Appointment />
         <FAQ />
+        <Appointment />
         <Contact />
       </main>
       <Footer />
