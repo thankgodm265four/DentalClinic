@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const CheckIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-brand-blue flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
@@ -7,28 +7,39 @@ const CheckIcon = () => (
 );
 
 const About: React.FC = () => {
+    const [imagesReversed, setImagesReversed] = useState(false);
     const features = [
         'Personalized Treatment Plans',
         'State-of-the-Art Technology',
         'Gentle Care for Kids and Adults',
         'Flexible Appointment Scheduling',
     ];
+    
+    const image1Src = "https://i.ibb.co/67YB0WbG/gettyimages-1486369860-612x612.jpg";
+    const image2Src = "https://i.ibb.co/BvsBjnM/image-1.webp";
 
     return (
         <section id="about" className="py-24 bg-bg-primary overflow-hidden">
             <div className="container mx-auto px-6">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     {/* Image Column */}
-                    <div className="relative h-[550px] hidden lg:block animate-fade-in-down">
+                    <div
+                        className="relative h-[550px] hidden lg:block animate-fade-in-down cursor-pointer group"
+                        onClick={() => setImagesReversed(!imagesReversed)}
+                        title="Click to swap images"
+                    >
+                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 bg-black bg-opacity-50 text-white px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                            Click to Swap
+                        </div>
                         <img
-                            src="https://i.ibb.co/67YB0WbG/gettyimages-1486369860-612x612.jpg"
+                            src={imagesReversed ? image2Src : image1Src}
                             alt="Dentist attending to a patient"
-                            className="absolute top-0 left-0 w-3/4 rounded-2xl shadow-lg object-cover h-[350px] transform transition-transform duration-500 hover:scale-105"
+                            className="absolute top-0 left-0 w-3/4 rounded-2xl shadow-lg object-cover h-[350px] transform transition-all duration-500 group-hover:scale-105"
                         />
                         <img
-                            src="https://i.ibb.co/BvsBjnM/image-1.webp"
+                            src={imagesReversed ? image1Src : image2Src}
                             alt="Close-up of dental procedure"
-                            className="absolute bottom-0 right-0 w-[85%] rounded-2xl shadow-2xl object-cover h-[400px] transform transition-transform duration-500 hover:scale-105 border-8 border-bg-primary"
+                            className="absolute bottom-0 right-0 w-[85%] rounded-2xl shadow-2xl object-cover h-[400px] transform transition-all duration-500 group-hover:scale-105 border-8 border-bg-primary"
                         />
                     </div>
 

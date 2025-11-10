@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MAIN_SERVICES, OTHER_SERVICES } from '../constants';
+import { MAIN_SERVICES, OTHER_SERVICES_DETAILED } from '../constants';
 import Calendar from './Calendar'; // Import the new Calendar component
 
 const Appointment: React.FC = () => {
@@ -16,7 +16,7 @@ const Appointment: React.FC = () => {
     const [errors, setErrors] = useState<{ name?: string; phone?: string }>({});
     const [isCalendarOpen, setIsCalendarOpen] = useState(false); // State to control calendar visibility
 
-    const allServices = [...MAIN_SERVICES.map(s => s.name), ...OTHER_SERVICES];
+    const allServices = [...MAIN_SERVICES, ...OTHER_SERVICES_DETAILED];
     
     const inputStyles = "mt-1 block w-full px-4 py-3 bg-bg-primary border border-border-color rounded-md shadow-sm focus:outline-none focus:ring-brand-accent focus:border-brand-accent";
     const labelStyles = "block text-sm font-medium text-text-body mb-1";
@@ -111,8 +111,8 @@ ${formData.message || 'No message.'}
                             <div>
                                 <label htmlFor="service" className={labelStyles}>Preferred Service</label>
                                 <select name="service" id="service" value={formData.service} onChange={handleChange} className={inputStyles}>
-                                    {allServices.map(serviceName => (
-                                        <option key={serviceName} value={serviceName}>{serviceName}</option>
+                                    {allServices.map(service => (
+                                        <option key={service.name} value={service.name}>{service.name}</option>
                                     ))}
                                 </select>
                             </div>

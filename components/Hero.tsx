@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-    }, 1000); // Change image every 1 second as requested
+    }, 4000); // Change image every 4 seconds as requested
 
     return () => clearInterval(intervalId);
   }, [heroImages.length]);

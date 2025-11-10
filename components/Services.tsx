@@ -1,36 +1,46 @@
 import React, { useState } from 'react';
-import { MAIN_SERVICES, OTHER_SERVICES } from '../constants';
+import { MAIN_SERVICES, OTHER_SERVICES_DETAILED } from '../constants';
 import type { Service } from '../types';
 
 interface ServiceCardProps {
-    service: Service;
-    onSelect: (service: Service) => void;
+  service: Service;
+  onSelect: (service: Service) => void;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ service, onSelect }) => (
-  <div className="bg-bg-primary p-8 rounded-xl border border-border-color text-left hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
-    <div className="mb-4">{service.icon}</div>
-    <h3 className="text-xl font-bold text-text-headings mb-2">{service.name}</h3>
-    <p className="text-text-body mb-4 flex-grow">{service.description}</p>
-    <button onClick={() => onSelect(service)} className="font-bold text-brand-accent hover:underline text-left">
+const ServiceCard: React.FC<ServiceCardProps> = ({ service, onSelect }) => {
+  return (
+    <div 
+      className="bg-bg-primary p-8 rounded-xl shadow-lg border border-border-color text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer flex flex-col items-center"
+      onClick={() => onSelect(service)}
+    >
+      <div className="mb-6">
+        {React.isValidElement(service.icon) && React.cloneElement(service.icon)}
+      </div>
+      <h3 className="text-2xl font-bold text-text-headings mb-3">{service.name}</h3>
+      <p className="text-text-body flex-grow">{service.description}</p>
+      <button className="mt-6 font-semibold text-brand-accent hover:underline focus:outline-none">
         Learn More &rarr;
-    </button>
-  </div>
-);
+      </button>
+    </div>
+  );
+};
 
 interface ServicesProps {
     onSelectService: (service: Service) => void;
 }
 
 const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
-  const [showOtherServices, setShowOtherServices] = useState(false);
+  const [showMore, setShowMore] = useState(false);
 
   return (
     <section id="services" className="py-24 bg-bg-secondary">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-text-headings">Our Services</h2>
-          <p className="text-text-body mt-2 text-lg max-w-2xl mx-auto">Comprehensive dental solutions to keep your smile healthy and bright for years to come.</p>
+          <p className="text-brand-accent font-bold mb-2 text-lg">Our Services</p>
+          <h2 className="text-4xl lg:text-5xl font-extrabold text-text-headings">What We Offer</h2>
+          <p className="text-text-body mt-4 text-lg max-w-2xl mx-auto">
+            We provide a wide range of dental services to ensure you have a healthy and beautiful smile.
+          </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {MAIN_SERVICES.map((service) => (
@@ -38,30 +48,29 @@ const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
           ))}
         </div>
 
-        <div className="text-center mt-16">
-          <button
-            onClick={() => setShowOtherServices(!showOtherServices)}
-            className="bg-brand-accent-light text-brand-accent px-8 py-3 rounded-lg font-bold hover:bg-white transition-all duration-300 transform hover:scale-105 shadow-sm border border-border-color"
-          >
-            {showOtherServices ? 'View Less Treatments' : 'View More Treatments'}
-          </button>
+        <div className="mt-20 text-center">
+            <h3 className="text-3xl font-bold text-text-headings mb-4">Other Dental Treatments</h3>
+            <div className={`transition-all duration-500 ease-in-out overflow-hidden ${showMore ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto p-8 bg-bg-primary rounded-lg shadow-inner border border-border-color">
+                    {OTHER_SERVICES_DETAILED.map(service => (
+                        <button 
+                            key={service.name} 
+                            onClick={() => onSelectService(service)}
+                            className="font-medium text-text-body hover:text-brand-accent transition-colors text-left"
+                        >
+                            &bull; {service.name}
+                        </button>
+                    ))}
+                </div>
+            </div>
+            <button
+                onClick={() => setShowMore(!showMore)}
+                className="mt-8 bg-brand-accent text-white px-8 py-3 rounded-lg font-bold text-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+                {showMore ? 'View Less' : 'View More Treatments'}
+            </button>
         </div>
-        
-        <div className={`transition-all duration-500 ease-in-out overflow-hidden ${showOtherServices ? 'max-h-[500px] opacity-100 mt-16' : 'max-h-0 opacity-0'}`}>
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-text-headings mb-6">Other Dental Treatments</h3>
-            <ul className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-3 max-w-4xl mx-auto text-text-body">
-              {OTHER_SERVICES.map((treatment) => (
-                <li key={treatment} className="flex items-center justify-center md:justify-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-brand-accent mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                  </svg>
-                  {treatment}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+
       </div>
     </section>
   );
