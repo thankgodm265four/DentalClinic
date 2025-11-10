@@ -32,13 +32,13 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Dr. Ogunwande A. T.',
     title: 'Director, Consultant Surgeon',
     bio: 'With over 15 years of experience, Dr. Ogunwande leads our team with a passion for surgical excellence and patient-centered care.',
-    imageUrl: 'https://source.unsplash.com/400x400/?african,male,doctor,portrait,smile',
+    imageUrl: 'https://i.ibb.co/zhGhXR8N/img1.jpg',
   },
   {
     name: 'Oluwafemi A. K. (RDTh.)',
     title: 'Principal Officer',
     bio: 'Oluwafemi is a registered dental therapist dedicated to providing top-notch preventative care and patient education.',
-    imageUrl: 'https://source.unsplash.com/400x400/?african,female,dentist,portrait,smile',
+    imageUrl: 'https://i.ibb.co/GQWt0xGQ/img6.jpg',
   },
 ];
 
@@ -65,7 +65,7 @@ export const MAIN_SERVICES: Service[] = [
     icon: <PlusCircleIcon />,
     detailedDescription: 'Losing a tooth can affect your confidence, speech, and ability to chew. We offer a range of modern teeth replacement solutions, including dental implants, bridges, and dentures. Our experts will help you choose the best option to restore your smile’s function and appearance seamlessly.',
     benefits: ['Restores chewing ability and speech', 'Prevents adjacent teeth from shifting', 'Provides a natural and long-lasting look', 'Improves facial structure and confidence'],
-    imageUrl: 'https://source.unsplash.com/1200x800/?dental-implant,dentistry,procedure',
+    imageUrl: 'https://i.ibb.co/kfcvZrr/Image4.webp',
   },
   {
     name: 'Orthodontics',
@@ -117,22 +117,22 @@ export const FAQ_DATA: FAQItem[] = [
 export const GALLERY_IMAGES: GalleryImage[] = [
   {
     beforeUrl: 'https://source.unsplash.com/600x600/?yellow-teeth,sad-smile',
-    afterUrl: 'https://source.unsplash.com/600x600/?white-teeth,happy-smile',
+    afterUrl: 'https://i.ibb.co/1J400VcW/image2.webp',
     description: 'Teeth Whitening Transformation',
   },
   {
     beforeUrl: 'https://source.unsplash.com/600x600/?crooked-teeth,unhappy',
-    afterUrl: 'https://source.unsplash.com/600x600/?straight-teeth,confident-smile',
+    afterUrl: 'https://i.ibb.co/3K3rN6x/img2.jpg',
     description: 'Orthodontic Alignment',
   },
   {
     beforeUrl: 'https://source.unsplash.com/600x600/?missing-tooth,smile-gap',
-    afterUrl: 'https://source.unsplash.com/600x600/?perfect-smile,dental-implant',
+    afterUrl: 'https://i.ibb.co/hFS93z5F/img7.jpg',
     description: 'Dental Implant Restoration',
   },
   {
     beforeUrl: 'https://source.unsplash.com/600x600/?chipped-tooth,closeup',
-    afterUrl: 'https://source.unsplash.com/600x600/?veneers,perfect-teeth',
+    afterUrl: 'https://i.ibb.co/dsPMzGLj/img17.jpg',
     description: 'Veneers for a Flawless Finish',
   },
 ];

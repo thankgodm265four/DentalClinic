@@ -7,9 +7,9 @@ const Hero: React.FC = () => {
   ];
 
   const heroImages = [
-    'https://i.ibb.co/CBrbVjM/dapp-1.png',        // Original smiling woman
-    'https://i.ibb.co/gb6K7F8/dapp-clinic-env.png', // New clinic environment
-    'https://i.ibb.co/KxtgrVp/dapp-dentist-patient.png',// New dentist with patient
+    'https://i.ibb.co/r2SYr0tC/front-page-img.jpg',
+    'https://i.ibb.co/BvsBjnM/image-1.webp',
+    'https://i.ibb.co/4gM7CjNf/front-page-img2.jpg',
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

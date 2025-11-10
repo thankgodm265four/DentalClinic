@@ -24,12 +24,13 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, onBack, onBook }
           <h1 className="text-4xl lg:text-5xl font-extrabold text-text-headings mb-4">{service.name}</h1>
           <p className="text-lg text-text-body mb-8">{service.detailedDescription}</p>
 
-          {/* Service Image */}
-          <img 
-            src={service.imageUrl}
-            alt={service.name}
-            className="rounded-2xl shadow-xl w-full h-auto object-cover max-h-[450px] mb-12"
-          />
+          {/* Service Icon Display */}
+          <div className="flex justify-center items-center my-12">
+            <div className="p-8 bg-brand-accent-light rounded-full shadow-md">
+              {React.isValidElement(service.icon) && React.cloneElement(service.icon, { className: 'h-20 w-20 text-brand-accent' })}
+            </div>
+          </div>
+
 
           {/* Benefits Section */}
           <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -38,7 +39,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, onBack, onBook }
                 <ul className="space-y-4">
                 {service.benefits.map((benefit, index) => (
                     <li key={index} className="flex items-start">
-                    <svg xmlns="http://www.w.org/2000/svg" className="h-6 w-6 text-brand-accent mr-3 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-brand-accent mr-3 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span className="text-text-body text-lg">{benefit}</span>

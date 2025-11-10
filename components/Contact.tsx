@@ -92,7 +92,7 @@ ${formData.message}
         <section id="contact">
             {/* Header Section */}
             <div className="bg-brand-accent-light py-20 md:py-28 text-center relative overflow-hidden">
-                <img src="https://source.unsplash.com/1600x900/?dental,clinic,blur" alt="Dental clinic background" className="absolute inset-0 w-full h-full object-cover"/>
+                <img src="https://i.ibb.co/KcqBqMD4/img4.jpg" alt="Dental clinic background" className="absolute inset-0 w-full h-full object-cover"/>
                 <div className="absolute inset-0 bg-brand-accent opacity-80"></div>
                 <div className="relative z-10">
                     <h1 className="text-4xl md:text-6xl font-extrabold text-white">Contact Us</h1>
