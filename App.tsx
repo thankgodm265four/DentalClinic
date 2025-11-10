@@ -9,9 +9,10 @@ import Appointment from './components/Appointment';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FloatingSocials from './components/FloatingSocials';
+// FIX: Imported the Gallery component to display it on the page.
+import Gallery from './components/Gallery';
 import ServiceDetail from './components/ServiceDetail';
 import type { Service } from './types';
-import Gallery from './components/Gallery';
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState('main');
@@ -49,7 +50,7 @@ const App: React.FC = () => {
             <About />
             <Services onSelectService={handleSelectService} />
             <Team />
-            {/* FIX: Render the Gallery component to display it on the page. */}
+            {/* FIX: Added the Gallery component to the main view. */}
             <Gallery />
             <FAQ />
             <Appointment />

@@ -92,7 +92,7 @@ const Calendar: React.FC<CalendarProps> = ({ selectedDate, onDateSelect, onClose
   };
 
   return (
-    <div ref={calendarRef} className="absolute top-full mt-2 w-full max-w-sm bg-bg-primary border border-border-color rounded-lg shadow-lg p-4 z-10">
+    <div ref={calendarRef} className="absolute top-full mt-2 w-full max-w-sm bg-bg-primary border border-gray-200 rounded-lg shadow-lg p-4 z-10">
       <div className="flex justify-between items-center mb-4">
         <button onClick={handlePrevMonth} className="p-2 rounded-full hover:bg-bg-secondary">&lt;</button>
         <div className="font-bold text-lg text-text-headings">

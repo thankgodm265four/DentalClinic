@@ -11,7 +11,7 @@ const Gallery: React.FC = () => {
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           {GALLERY_IMAGES.map((image, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg border border-border-color overflow-hidden group">
+            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden group">
               <div className="grid grid-cols-2">
                 <div className="overflow-hidden">
                   <img src={image.beforeUrl} alt={`Before ${image.description}`} className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-300" />
