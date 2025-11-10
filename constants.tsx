@@ -1,6 +1,5 @@
 import React from 'react';
-// FIX: Import GalleryImage type to use for the new GALLERY_IMAGES constant.
-import type { TeamMember, Service, FAQItem, GalleryImage } from './types';
+import type { TeamMember, Service, FAQItem } from './types';
 
 // Icons for services
 const TeethWhiteningIcon = () => (
@@ -168,19 +167,5 @@ export const FAQ_DATA: FAQItem[] = [
   {
     question: 'At what age should my child first see a dentist?',
     answer: 'The American Academy of Pediatric Dentistry recommends that a child should see a dentist by their first birthday or within six months after their first tooth erupts.',
-  },
-];
-
-// FIX: Add GALLERY_IMAGES export to resolve the import error in Gallery.tsx.
-export const GALLERY_IMAGES: GalleryImage[] = [
-  {
-    beforeUrl: 'https://i.ibb.co/BvsBjnM/image-1.webp',
-    afterUrl: 'https://i.ibb.co/KcqBqMD4/img4.jpg',
-    description: 'Teeth Whitening Transformation',
-  },
-  {
-    beforeUrl: 'https://i.ibb.co/r2SYr0tC/front-page-img.jpg',
-    afterUrl: 'https://i.ibb.co/67YB0WbG/gettyimages-1486369860-612x612.jpg',
-    description: 'Smile Correction',
   },
 ];

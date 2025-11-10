@@ -20,10 +20,3 @@ export interface FAQItem {
   question: string;
   answer: string;
 }
-
-// FIX: Added GalleryImage type to be used for the gallery data.
-export interface GalleryImage {
-  beforeUrl: string;
-  afterUrl: string;
-  description: string;
-}
